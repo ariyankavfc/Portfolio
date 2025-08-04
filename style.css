@@ -7,10 +7,10 @@
 body{
     height: 100%;
     background-image: radial-gradient(circle, #252f3d, #272c41, #2d2842, #372240, #411a3a);
+    scroll-behavior: smooth;
 }
 .cont{
     position: relative;
-    height: 100%;
 }
 header{
     position: fixed;
@@ -23,9 +23,6 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-@media (max-width: 768px) {
-  
 }
 .logo{
     font-size: 25px;
@@ -48,8 +45,9 @@ header{
 .home{
     display: flex;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
     gap: 50px;
+    margin-top: 20px;
     padding: 50px 5% 0;
     color: #fff;
 }
@@ -108,6 +106,7 @@ header{
 }
 .iimgbox{
     position: relative;
+    top: 25px;
     width: 28vw;
     height: 28vw;
     border: 2px solid 	#FF8A65;
@@ -176,8 +175,7 @@ header{
   color: #F9FAFB;
   text-decoration: none;
   border: none;
-  padding: 10px 24px;
-  border-radius: 8px;
+  border-radius: 50%;
   font-weight: bold;
   transition: background-color 0.3s;
 }
@@ -248,9 +246,16 @@ header{
     }
 
     .skill-name {
-      font-size: 18px;
+      font-size: 1em;
+      font-weight: bold;
       color: #333;
       margin-top: 5px;
+    }
+    @media (min-width: 450px){
+      .skill-name{
+        font-size:10px;
+        font-weight: bold;
+      }
     }
 
 
@@ -286,6 +291,12 @@ header{
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       overflow: hidden;
     
+    }
+    @media (min-width:450px)
+    {
+      .card-grid{
+        width: 75%;
+      }
     }
 
     .card img {
@@ -374,6 +385,8 @@ header{
 }
 
 .project-card {
+  display: flex;
+  flex-direction: row;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -387,7 +400,7 @@ header{
 
 .project-image {
   width: 100%;
-  height: 200px;
+  height: 260px;
   object-fit: cover;
 }
 
@@ -442,6 +455,20 @@ header{
   .section-title h2 {
     font-size: 2rem;
   }
+  
+}
+@media (min-width:450px){
+  .projects-grid{
+    width: 78%;
+    margin-left: 95px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .project-image{
+    height: 300px;
+    overflow: hidden;
+  }
 }
 
 
@@ -453,8 +480,8 @@ header{
 
 #contact h2 {
     font-size: 36px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-top: -40px;
     color: #00E676;
     text-decoration: underline; 
     text-underline-offset: 10px;
